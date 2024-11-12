@@ -26,7 +26,7 @@ model = joblib.load("best_xgboost_model.joblib")
 st.title("Stroke Risk Predictor")
 
 st.write("""
-This app predicts the risk of stroke based on patient data.
+This app predicts the risk of stroke based on your data.
 Please provide the required information below.
 """)
 
@@ -49,7 +49,7 @@ if height <= 0:
     bmi = None  # Set BMI as None to avoid errors
 else:
     bmi = round(weight / (height ** 2), 2)
-    st.write(f"Your calculated BMI is: {bmi}")
+    st.write(f"Your calculated Body Mass Index (BMI) is: {bmi}")
 
 smoking_status = st.selectbox("Smoking Status", ["Never_smoked", "Formerly_smoked", "Smokes", "Unknown"])
 
